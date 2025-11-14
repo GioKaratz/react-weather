@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { useWeather } from "./useWeather";
+import Weather from "./Weather";
 
-function App() {
+export default function App() {
+  const [location, setLocation] = useState("");
+  const { isLoading, weather, displayLocation } = useWeather(location);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>React Weather</h1>
+      <div className="search">
+        <input
+          type="text"
+          placeholder="Select location..."
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+      </div>
+      {isLoading && <p className="loader">Loading</p>}
+      {weather.weathercode && (
+        <Weather weather={weather} displayLocation={displayLocation} />
+      )}
     </div>
   );
 }
-
-export default App;
