@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# React Weather
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React Weather is a small, responsive React application that lets you search for a location and view a 7-day weather forecast using the Open-Meteo API.
 
-## Available Scripts
+This project is suitable for demos and learning—especially for practicing React hooks, fetch/AbortController usage and simple component composition.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Quick overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Type at least 3 characters to search for a location.
+- The app displays a 7-day forecast with simple icons and temperatures.
+- Helper functions are included for icons, country flags and day formatting.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- React with a custom hook (`useWeather`) for fetching and state management
+- Open-Meteo for geocoding and forecast data
+- Responsive, centered UI with day cards
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+- Node.js (>= 14) and npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Local development (Windows PowerShell)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+From the project root (`react-weather`):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```powershell
+npm install
+npm start
+```
 
-### `npm run eject`
+This starts the development server (typically at http://localhost:3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Type a location in the search input (at least 3 characters).
+2. Wait briefly while the app fetches data.
+3. The list of days appears under the title with icons and temperatures.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Important files
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `src/App.js` — main component and layout
+- `src/useWeather.js` — custom hook that queries Open-Meteo
+- `src/weatherUtils.js` — helper functions: `getWeatherIcon`, `convertToFlag`, `formatDay`
+- `src/index.css` — main styling
