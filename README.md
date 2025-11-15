@@ -2,7 +2,7 @@
 
 React Weather is a small, responsive React application that lets you search for a location and view a 7-day weather forecast using the Open-Meteo API.
 
-This project is suitable for demos and learning—especially for practicing React hooks, fetch/AbortController usage and simple component composition.
+This project is suitable for demos and learning-especially for practicing React hooks, fetch/AbortController usage and simple component composition.
 
 ---
 
@@ -41,7 +41,7 @@ This starts the development server (typically at http://localhost:3000).
 
 ## Important files
 
-- `src/App.js` — main component and layout
-- `src/useWeather.js` — custom hook that queries Open-Meteo
-- `src/weatherUtils.js` — helper functions: `getWeatherIcon`, `convertToFlag`, `formatDay`
-- `src/index.css` — main styling
+- `src/App.js` - main component and layout
+- `src/useWeather.js` - custom hook that queries Open-Meteo
+- `src/weatherUtils.js` - helper functions: `getWeatherIcon`, `convertToFlag`, `formatDay`
+- `src/index.css` - main styling
